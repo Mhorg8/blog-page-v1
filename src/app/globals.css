@@ -82,3 +82,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .hoverEffect {
+    @apply transition-all duration-200;
+  }
+}
