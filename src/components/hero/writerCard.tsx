@@ -2,7 +2,7 @@ import React from "react";
 
 const WriterCard = () => {
   return (
-    <div className="w-full col-span-1 h-[300px] bg-zinc-200 rounded-xl shadow-sm cursor-pointer hover:shadow-lg hover:scale-105 hoverEffect">
+    <div className="w-full col-span-1 h-[300px] bg-zinc-200 rounded-xl shadow-sm cursor-pointer  hover:scale-105 hoverEffect">
       {/* user image info */}
       <div className="h-2/3  bg-zinc-100 rounded-t-xl"></div>
       {/* user information */}
@@ -18,7 +18,7 @@ const WriterCard = () => {
         </div>
 
         <div className="">
-          <p className="text-sm text-darkGray">
+          <p className="text-sm text-darkGray line-clamp-3 md:line-clamp-2 lg:line-clamp-3">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora,
             voluptate?
           </p>

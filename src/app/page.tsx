@@ -13,6 +13,8 @@ export default function Home() {
         {/* top writer card */}
         <TopWriter />
       </div>
+
+      {/*  commend slider */}
       <CommendSlider />
     </div>
   );
