@@ -17,7 +17,7 @@ const CommendView = () => {
                     Doloremque eos inventore aut!
                 </p>
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-xl">
+                    <div className="flex items-center gap-2 text-xl">
                         <button className="icon-button ">
                             <RiHeartLine className="text-xl  text-red fill-red"/>
                         </button>
