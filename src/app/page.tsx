@@ -8,21 +8,15 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      {/* top writer card */}
       <div className="container py-4">
         <h2 className="text-2xl md:text-4xl font-bold">
           Top Writer for last month
         </h2>
-        {/* top writer card */}
         <TopWriter />
       </div>
-
-      {/*  commend slider */}
       <CommendSlider />
-      
-      {/*  Best seller */}
       <BestWriter />
-
-      {/* Blogs */}
       <Blogs />
     </div>
   );

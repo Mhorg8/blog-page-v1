@@ -15,12 +15,11 @@ const MobileMenu = ({ toggleMenuStatus }: Props) => {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: easeIn }}
       exit={{ x: 10, opacity: 0 }}
-      className="w-[68dvw] h-screen md:hidden absolute top-0 right-0 z-50"
+      className="w-[68dvw] h-screen md:hidden absolute top-0 -right-8 z-50"
     >
       <div className="w-full h-full relative bg-zinc-200 ">
         <Button
           onClick={() => toggleMenuStatus("close")}
-          size={"icon"}
           className="border-none p-2 text-xl absolute top-5 right-5"
           variant={"secondary"}
         >
