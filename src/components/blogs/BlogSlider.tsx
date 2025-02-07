@@ -5,27 +5,12 @@ import BlogItem from "./BlogItem";
 
 const BlogSlider = () => {
   return (
-    <div className="mt-10">
-      <Swiper
-        spaceBetween={10}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1280: {
-            slidesPerView: 4,
-          },
-        }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide>
+    <div className="mt-10 ">
+      <Swiper className="" spaceBetween={30} slidesPerView={1}>
+        <SwiperSlide className="border-b-4 border-b-black pb-4 last:border-b-0">
+          <BlogItem />
+        </SwiperSlide>
+        {/* <SwiperSlide>
           <BlogItem />
         </SwiperSlide>
         <SwiperSlide>
@@ -33,10 +18,7 @@ const BlogSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <BlogItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <BlogItem />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

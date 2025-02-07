@@ -1,45 +1,62 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { FaRegHeart, FaRegBookmark, FaEye } from "react-icons/fa";
+import { FaRegHeart, FaRegBookmark } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const BlogItem = () => {
   return (
-    <div className="h-[350px] w-[350px] rounded-xl overflow-hidden p-2 shadow-md bg-zinc-200">
+    <div className="w-full max-w-4xl max-h-[200px] h-fit  flex items-start justify-between gap-4 md:gap-5 lg:gap-7">
       {/* image container */}
-      <div className="w-full h-2/3 relative">
+      <Link href={`/blog/${231231}`} className="w-[170px] h-[170px] relative">
         <Image
-          src="/banner-2.jpg"
-          className="object-contain rounded-lg hover:scale-110 hoverEffect cursor-pointer"
-          alt="Banner"
+          src="/banner-1.jpg"
           fill
-          sizes="fill"
+          alt="blog image"
+          className="object-cover rounded-md"
         />
-      </div>
+      </Link>
+
       {/* text container */}
-      <div className="mt-3 flex flex-col gap-3">
-        <div className="">
-          <h3 className="text-lg leading-none font-medium">
-            How we can use React to create single page applications{" "}
-          </h3>
-          <p className="text-sm text-neutral-600 font-medium">By John Doe</p>
-        </div>
-
-        <div className="flex items-center justify-between ">
-          {/* action container */}
-          <div className="flex items-center gap-3">
-            <button className="hover:scale-125 text-red  hoverEffect ">
-              <FaRegHeart size={18} />
-            </button>
-
-            <button className="hover:scale-125  text-green  hoverEffect ">
-              <FaRegBookmark size={18} />
-            </button>
-          </div>
-          {/* view count */}
-          <p className="text-sm text-neutral-600 flex items-center gap-1">
-            <FaEye size={18} />
-            100
+      <div className="flex flex-col justify-start flex-1">
+        <div>
+          <h2 className="text-2xl lg:text-3xl font-semibold">
+            How we can create E-commerce shop with react in 2025
+          </h2>
+          <p className="text-sm line-clamp-2 text-neutral-700">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe et
+            minus sint omnis, distinctio voluptatem cumque minima velit est
+            exercitationem modi pariatur voluptates eveniet sapiente.
           </p>
+          <div className="text-sm mt-1 font-medium text-neutral-700">
+            By{" "}
+            <span className="text-black font-semibold">
+              &quot;Mohammad hosein&quot;
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center justify-between mt-3">
+          <motion.div
+            initial={{ x: 0 }}
+            whileHover={{ x: 5 }}
+            className="text-lg font-semibold group flex items-center gap-1  cursor-pointer"
+          >
+            <Link href={`blog/${2312312}`} className="">
+              Read More
+            </Link>
+            <FaArrowRightLong className="" />
+          </motion.div>
+
+          <div className="flex items-center gap-2">
+            <ActionButton>
+              <FaRegHeart size={18} />
+            </ActionButton>
+            <ActionButton>
+              <FaRegBookmark size={18} />
+            </ActionButton>
+          </div>
         </div>
       </div>
     </div>
@@ -47,3 +64,16 @@ const BlogItem = () => {
 };
 
 export default BlogItem;
+
+const ActionButton = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <motion.button
+      initial={{ scale: 1 }}
+      whileTap={{ scale: [1.5, 1, 1.2] }}
+      transition={{ duration: 1.2 }}
+      className="bg-transparent"
+    >
+      {children}
+    </motion.button>
+  );
+};
