@@ -93,6 +93,7 @@ const HeaderActions = () => {
           e.stopPropagation();
           setDropdownStatus("close");
           setSidebarStatus("open");
+          setOpenModal(null);
         }}
         className="border-none p-2 text-xl md:hidden"
         variant={"secondary"}

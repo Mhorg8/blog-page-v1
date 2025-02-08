@@ -94,3 +94,9 @@
         @apply bg-zinc-100 shadow-sm w-8 h-8 rounded-full text-black flex items-center justify-center hover:scale-105 hover:shadow-md transition-all duration-200
     }
 }
+
+@layer components {
+    .form-wrapper {
+        @apply w-[350px] md:w-[380px] lg:w-[400px] h-[380px]  bg-white rounded-xl shadow-md flex flex-col justify-start items-center p-4
+    }
+}

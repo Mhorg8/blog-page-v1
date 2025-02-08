@@ -3,7 +3,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const NotificationsModal = () => {
   return (
-    <div className="w-[300px] h-fit bg-zinc-200 py-2 bg-opacity-70 absolute top-full mt-3 right-5 z-50 rounded-md shadow-lightCream shadow-sm">
+    <div className="w-[300px] h-fit bg-zinc-200 py-2  absolute top-full mt-3 right-5 z-50 rounded-md shadow-lightCream shadow-sm">
       <div className="">
         <div
           className="hover:bg-brown hover:bg-opacity-45 hoverEffect cursor-pointer px-2 py-3 text-opacity-80
