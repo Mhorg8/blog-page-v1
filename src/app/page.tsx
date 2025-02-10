@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import BestWriter from "@/components/BestWriter";
 import Blogs from "@/components/blogs/Blogs";
 import CommendSlider from "@/components/hero/CommendSlider";
@@ -18,6 +19,7 @@ export default function Home() {
       <CommendSlider />
       <BestWriter />
       <Blogs />
+      <Banner />
     </div>
   );
 }
