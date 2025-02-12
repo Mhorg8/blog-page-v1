@@ -1,5 +1,7 @@
 "use client";
 import { easeIn, motion } from "framer-motion";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 const Hero = () => {
   const animationVariants = {
     initial: {
@@ -32,6 +34,9 @@ const Hero = () => {
       >
         Write without any borders from Anywhere.
       </motion.h1>
+        <Button  variant="default" className="mt-3 rounded-sm" size="lg">
+            <Link href='/newBlog'>Get Start</Link>
+        </Button>
       <motion.div
         variants={animationVariants}
         initial="initial"

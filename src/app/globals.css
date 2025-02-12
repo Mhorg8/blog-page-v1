@@ -99,4 +99,12 @@
     .form-wrapper {
         @apply w-[350px] md:w-[380px] lg:w-[400px] h-[380px]  bg-white rounded-xl shadow-md flex flex-col justify-start items-center p-4
     }
+
+    .undo-button {
+        @apply absolute top-3 left-10  border
+    }
+
+    .info-box {
+        @apply text-sm border border-zinc-300 h-24 w-24 rounded-lg flex flex-col items-center justify-center hover:border-white hover:bg-black hover:text-white hoverEffect cursor-pointer
+    }
 }

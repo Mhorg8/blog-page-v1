@@ -21,7 +21,7 @@ const CustomInput = ({
 }: Props) => {
   return (
     <div className={`flex flex-col ${containerStyle} gap-1.5`}>
-      <Label htmlFor={name} className="text-zinc-800 capitalize">
+      <Label htmlFor={name} className="text-zinc-800 capitalize font-semibold text-sm">
         {label}
       </Label>
       <Input

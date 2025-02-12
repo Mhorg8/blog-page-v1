@@ -17,7 +17,7 @@ const SingleBlogContent = () => {
         </p>
       </div>
 
-      <div className="w-[80%] text-wrap space-y-4">
+      <div className="w-full md:w-[80%] text-wrap space-y-4 border-b border-b-black pb-5">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
           eius, exercitationem vitae atque in velit. Deserunt et dignissimos ex
