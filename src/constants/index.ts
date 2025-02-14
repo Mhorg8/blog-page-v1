@@ -2,7 +2,7 @@ import { FooterItem, NavItems } from "@/types";
 
 export const navItems: NavItems[] = [
   { title: "Home", href: "/" },
-  { title: "Trends", href: "/trend" },
+  { title: "Trends", href: "/trends" },
   { title: "Liked", href: "/liked" },
   { title: "Saved", href: "/saved" },
 ];

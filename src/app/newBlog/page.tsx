@@ -1,4 +1,3 @@
-import React from 'react';
 import {Button} from "@/components/ui/button";
 import {IoArrowUndoOutline} from "react-icons/io5";
 import CreateNewBlogForm from "@/components/CreateNewBlogForm";
@@ -6,7 +5,7 @@ import CreateNewBlogForm from "@/components/CreateNewBlogForm";
 const NewBlogPage = () => {
 
     return (
-        <div className="container relative min-h-[calc(100vh-100px)]">
+        <div className="container relative h-full md:min-h-[calc(100vh-100px)]">
             <Button
                 className="undo-button w-10 h-10 rounded-full absolute right-0 top-0"
                 size="icon">
@@ -21,7 +20,7 @@ const NewBlogPage = () => {
                 <div className="mt-5">
                     <CreateNewBlogForm/>
 
-                    <div className="flex items-center justify-around w-1/2 mt-7">
+                    <div className="flex items-center justify-around w-full md:w-1/2 mt-7 gap-3">
                         <div
                             className="info-box">
                             <p>Total Blog </p>

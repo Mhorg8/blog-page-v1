@@ -11,8 +11,6 @@ interface Props {
 const NavMenu = ({ className }: Props) => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <nav className={cn("hidden md:flex items-center gap-2 ", className)}>
       {navItems.map((item) => (
