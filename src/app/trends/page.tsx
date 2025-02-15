@@ -1,6 +1,8 @@
 import TrendBanner from "@/components/trends/TrendBanner";
 import FilterOptions from "@/components/FilterOptions";
-import TrendIItem from "@/components/TrendIItem";
+import HeaderTitle from "@/components/HeaderTitle";
+import BestWriter from "@/app/trends/BestWriter";
+import TrendsItemList from "@/app/trends/TrendsItemList";
 
 
 const TrendsPage = () => {
@@ -9,13 +11,23 @@ const TrendsPage = () => {
         <div className="container ">
             {/*banner*/}
             <TrendBanner/>
-
-            <div className="flex flex-col md:flex-row w-full items-center justify-start gap-5 mt-10 relative">
-                <div className="w-full h-full bg-zinc-200 py-3 rounded-xl shadow-md px-3 min-h-[200px]">
-                    <TrendIItem/>
-                </div>
-                <div className="w-[250px] h-[250px] sticky top-0 right-0">
+            {/*Mapping on Trend Items and displayed here */}
+            <div
+                className="flex flex-col md:flex-row w-full h-full items-center md:items-start justify-start gap-x-5 mt-10 relative">
+                <TrendsItemList/>
+                <div className="hidden h-full md:block w-[250px]  sticky top-20">
                     <FilterOptions/>
+                </div>
+            </div>
+            {/* Best Writer on month */}
+            <div className="mt-14">
+                <HeaderTitle text="Best writer of month"/>
+
+                <div className="flex flex-wrap flex-col md:flex-row items-center gap-5 justify-between mt-5">
+                    <BestWriter/>
+                    <BestWriter/>
+                    <BestWriter/>
+                    <BestWriter/>
                 </div>
             </div>
         </div>

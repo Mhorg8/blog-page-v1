@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 
 interface Props {
-    className: string;
+    className?: string;
     bgColor?: string;
     placeholder?: string;
     values?: string[];

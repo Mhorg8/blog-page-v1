@@ -17,7 +17,7 @@ mollit anim id est laborum.
     const isLongText = (text: string) => {
         const textLength = text.length
         if (textLength >= 150) {
-            return text.split(" ").slice(0, 25)
+            return text.split(" ").slice(0, 25).join(" ")
         }
     }
 
@@ -43,11 +43,11 @@ mollit anim id est laborum.
                     </div>
                 </div>
 
-                {/*  text   */}F
+                {/*  text   */}
                 <div className="flex items-center justify-between w-full">
                     <div className="w-[300px] md:max-w-[400px] md:w-full text-black/80 text-sm tracking-wide">
                         <p className="text-wrap break-words">
-                            {!showAllText ? isLongText(tempText) : tempText}
+                            {!showAllText ? `${isLongText(tempText)}...`: tempText}
                         </p>
 
                     </div>
