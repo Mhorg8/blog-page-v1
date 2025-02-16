@@ -1,10 +1,14 @@
 "use client"
 import React, {useState} from 'react';
-import {LuBookmark, LuHeart, LuStar} from "react-icons/lu";
+import {LuStar} from "react-icons/lu";
+import TrendItemCommends from "@/app/trends/TrendItemCommends";
+import TrendItemActions from "@/app/trends/TrendItemActions";
+
 
 const TrendIItem = () => {
 
     const [showAllText, setshowAllText] = useState(false);
+    const [showCommends, setShowCommends] = useState(false);
     const tempText = `
      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -47,31 +51,14 @@ mollit anim id est laborum.
                 <div className="flex items-center justify-between w-full">
                     <div className="w-[300px] md:max-w-[400px] md:w-full text-black/80 text-sm tracking-wide">
                         <p className="text-wrap break-words">
-                            {!showAllText ? `${isLongText(tempText)}...`: tempText}
+                            {!showAllText ? `${isLongText(tempText)}...` : tempText}
                         </p>
-
                     </div>
                 </div>
                 {/*actions*/}
-                <div className="flex items-center justify-between w-full">
-                    <button onClick={() => setshowAllText(!showAllText)}
-                            className="text-black font-semibold underline text-sm">
-                        {showAllText ? "show less" : "show more"}
-                    </button>
-                    <div className="flex items-center gap-2">
-                        <button
-                            className="p-2 bg-zinc-100 hover:text-red hover:scale-110 hoverEffect rounded-full">
-                            <LuHeart size={18}/>
-                        </button>
-                        <button
-                            className="p-2 bg-zinc-100 hover:text-green hover:scale-110 hoverEffect rounded-full">
-                            <LuBookmark size={18}/>
-                        </button>
-                    </div>
-                </div>
-                {/*    actions*/}
-
-
+                <TrendItemActions setShowAllText={setshowAllText} setShowCommends={setShowCommends} showAllText={showAllText}/>
+                {/*  commends  */}
+                {showCommends && <TrendItemCommends setShowCommends={setShowCommends} showCommends={showCommends}/>}
             </div>
         </>
     );

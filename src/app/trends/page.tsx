@@ -3,6 +3,7 @@ import FilterOptions from "@/components/FilterOptions";
 import HeaderTitle from "@/components/HeaderTitle";
 import BestWriter from "@/app/trends/BestWriter";
 import TrendsItemList from "@/app/trends/TrendsItemList";
+import Image from "next/image";
 
 
 const TrendsPage = () => {
@@ -23,11 +24,29 @@ const TrendsPage = () => {
             <div className="mt-14">
                 <HeaderTitle text="Best writer of month"/>
 
-                <div className="flex flex-wrap flex-col md:flex-row items-center gap-5 justify-between mt-5">
+                <div className="grid grid-cols-12 gap-5 justify-center mt-5">
                     <BestWriter/>
                     <BestWriter/>
                     <BestWriter/>
                     <BestWriter/>
+                </div>
+            </div>
+
+
+            <div
+                className="flex flex-col md:flex-row w-full h-full items-center md:items-start justify-start gap-x-5 mt-10 relative">
+                <div className="w-full mt-10">
+                    <HeaderTitle text="New in Technology" customStyle="mb-5"/>
+                    <TrendsItemList/>
+                </div>
+                <div className="hidden h-full md:block w-[300px] p-2 mt-24 bg-zinc-200 rounded-xl">
+                    <div className=" h-full bg-white rounded-lg">
+                        <div className="flex items-center justify-between p-1">
+                            <div className="flex relative w-12 h-12 ">
+                                <Image src='/banner-1.jpg' alt='' fill sizes="fill" className="rounded-full object-cover object-center" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

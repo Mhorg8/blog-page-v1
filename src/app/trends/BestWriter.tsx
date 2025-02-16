@@ -7,7 +7,7 @@ import {FaLongArrowAltRight} from "react-icons/fa";
 const BestWriter = () => {
     return (
         <div
-            className="md:w-[250px] w-[290px] h-[320px] md:h-[300px] bg-zinc-200 rounded-xl shadow-md p-2 relative cursor-pointer group">
+            className="col-span-12 md:col-span-6 lg:col-span-3 xl:col-span-3 h-[320px] md:h-[300px] bg-zinc-200 rounded-xl shadow-md p-2 relative cursor-pointer group">
             {/* User profile image */}
             <Image src='/banner-1.jpg' fill sizes="fill" alt="user immage"
                    className="object-cover rounded-xl"/>
