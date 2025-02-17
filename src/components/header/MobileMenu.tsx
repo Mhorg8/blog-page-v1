@@ -15,7 +15,7 @@ const MobileMenu = ({ toggleMenuStatus }: Props) => {
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: easeIn }}
       exit={{ x: 10, opacity: 0 }}
-      className="w-[68dvw] h-screen md:hidden absolute top-0 -right-8 z-50"
+      className="w-[68dvw] h-screen md:hidden absolute top-0 -right-8 z-[999]"
     >
       <div className="w-full h-full relative bg-zinc-200 ">
         <Button

@@ -4,10 +4,14 @@ import Link from "next/link";
 
 const CommendView = () => {
     return (
-        <div className="w-full space-y-4 bg-white p-2 border border-gray-300 rounded-xl p-3">
+        <div className="w-full space-y-4 bg-white border border-gray-300 rounded-xl p-3">
             {/* top card */}
             <div className="flex items-center justify-between w-full">
-                <div className="w-9 h-9 rounded-full bg-red shadow-md hover:scale-110 cursor-pointer hoverEffect"></div>
+                <div className="flex items-center gap-2">
+                    <div
+                        className="w-9 h-9 rounded-full bg-red shadow-md hover:scale-110 cursor-pointer hoverEffect"/>
+                    <h3 className="text-sm font-semibold">Mohammad</h3>
+                </div>
                 <p className="font-medium text-darkGray text-sm">Writer</p>
             </div>
             {/* bottom card */}

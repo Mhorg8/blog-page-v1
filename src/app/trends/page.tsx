@@ -3,9 +3,6 @@ import FilterOptions from "@/components/FilterOptions";
 import HeaderTitle from "@/components/HeaderTitle";
 import BestWriter from "@/app/trends/BestWriter";
 import TrendsItemList from "@/app/trends/TrendsItemList";
-import Image from "next/image";
-import {LuUserPlus, LuUsers} from "react-icons/lu";
-import CustomTooltip from "@/components/CustomTooltip";
 import SmallProfileView from "@/components/SmallProfileView";
 
 

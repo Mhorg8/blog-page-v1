@@ -5,15 +5,15 @@ import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 const Pagination = () => {
   return (
     <div className="flex  items-center justify-center gap-1.5 mt-5">
-      <Button size={"default"} variant={"secondary"}>
+      <Button size={"sm"} variant={"secondary"}>
         <IoChevronBackOutline />
         Prev{" "}
       </Button>
-      <Button variant={"secondary"}>1</Button>
-      <Button variant={"secondary"}>2</Button>
-      <Button variant={"secondary"}>3</Button>
-      <Button variant={"secondary"}>...</Button>
-      <Button variant={"secondary"}>
+      <Button variant={"secondary"} size="sm">1</Button>
+      <Button variant={"secondary"}  size="sm">2</Button>
+      <Button variant={"secondary"}  size="sm">3</Button>
+      <Button variant={"secondary"}  size="sm">...</Button>
+      <Button variant={"secondary"}  size="sm">
         Next
         <IoChevronForwardOutline />
       </Button>
