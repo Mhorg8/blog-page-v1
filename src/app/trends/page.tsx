@@ -4,6 +4,9 @@ import HeaderTitle from "@/components/HeaderTitle";
 import BestWriter from "@/app/trends/BestWriter";
 import TrendsItemList from "@/app/trends/TrendsItemList";
 import Image from "next/image";
+import {LuUserPlus, LuUsers} from "react-icons/lu";
+import CustomTooltip from "@/components/CustomTooltip";
+import SmallProfileView from "@/components/SmallProfileView";
 
 
 const TrendsPage = () => {
@@ -39,14 +42,10 @@ const TrendsPage = () => {
                     <HeaderTitle text="New in Technology" customStyle="mb-5"/>
                     <TrendsItemList/>
                 </div>
-                <div className="hidden h-full md:block w-[300px] p-2 mt-24 bg-zinc-200 rounded-xl">
-                    <div className=" h-full bg-white rounded-lg">
-                        <div className="flex items-center justify-between p-1">
-                            <div className="flex relative w-12 h-12 ">
-                                <Image src='/banner-1.jpg' alt='' fill sizes="fill" className="rounded-full object-cover object-center" />
-                            </div>
-                        </div>
-                    </div>
+                <div className="hidden h-full md:block w-[300px] p-2 mt-24 bg-zinc-200 rounded-xl space-y-2">
+                  <SmallProfileView />
+                  <SmallProfileView />
+                  <SmallProfileView />
                 </div>
             </div>
         </div>
