@@ -5,13 +5,13 @@ import BestWriter from "@/app/trends/BestWriter";
 import TrendsItemList from "@/app/trends/TrendsItemList";
 import SmallProfileView from "@/components/SmallProfileView";
 
-
 const TrendsPage = () => {
 
     return (
         <div className="container ">
             {/*banner*/}
-            <TrendBanner/>
+            <TrendBanner ImageSrc="/trendBanner.jpg" title="New way for Reading anything." subtitle="You can find everything you want here."/>
+
             {/*Mapping on Trend Items and displayed here */}
             <div
                 className="flex flex-col md:flex-row w-full h-full items-center md:items-start justify-start gap-x-5 mt-10 relative">
@@ -40,9 +40,9 @@ const TrendsPage = () => {
                     <TrendsItemList/>
                 </div>
                 <div className="hidden h-full md:block w-[300px] p-2 mt-24 bg-zinc-200 rounded-xl space-y-2">
-                  <SmallProfileView />
-                  <SmallProfileView />
-                  <SmallProfileView />
+                    <SmallProfileView/>
+                    <SmallProfileView/>
+                    <SmallProfileView/>
                 </div>
             </div>
         </div>
