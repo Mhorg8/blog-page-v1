@@ -36,9 +36,19 @@ const Hero = () => {
             >
                 Write without any borders from Anywhere.
             </motion.h1>
-            <Button variant="default" className="mt-3 hover:text-green rounded-none z-[50]" size="lg">
-                <Link href='/newBlog'>Get Start</Link>
-            </Button>
+            <motion.div className="z-[100]"
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.6,
+                            type: "spring",
+                            stiffness: 130,
+                        }}>
+                <Button variant="default" className="mt-3 hover:text-green  rounded-none " size="lg">
+                    <Link href='/newBlog'>Get Start</Link>
+                </Button>
+            </motion.div>
             <motion.div
                 variants={animationVariants}
                 initial="initial"
