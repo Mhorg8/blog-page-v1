@@ -25,6 +25,7 @@ const HeaderActions = () => {
   const toggleMenuStatus = (status: "likes" | "commends" | null) => {
     setOpenModal(status === openModal ? null : status);
   };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
