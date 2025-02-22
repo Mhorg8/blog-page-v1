@@ -23,7 +23,7 @@ const AboutPage = () => {
     }
 
     return (
-        <div className="h-[calc(100dvh-50px)] bg-zinc-200 ">
+        <div className="h-full md:h-[calc(100dvh-50px)] bg-zinc-200 ">
             <div className="grid grid-cols-1 md:grid-cols-2 md lg:grid-cols-4 gap-7 px-5 py-10">
 
                 {isOpen >= 1 && <motion.div

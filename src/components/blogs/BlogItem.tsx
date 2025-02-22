@@ -22,7 +22,7 @@ const BlogItem = () => {
       {/* text container */}
       <div className="flex flex-col justify-start flex-1">
         <div>
-          <h2 className="text-xl line-clamp-2 md:text-2xl lg:text-3xl font-semibold">
+          <h2 className="text-lg line-clamp-2 md:text-2xl lg:text-3xl font-semibold">
             How we can create E-commerce shop with react in 2025
           </h2>
           <p className="text-sm line-clamp-2 text-neutral-700">
@@ -43,7 +43,7 @@ const BlogItem = () => {
             whileHover={{ x: 5 }}
             className="text-sm md:text-lg font-semibold group flex items-center gap-1  cursor-pointer"
           >
-            <Link href={`blog/${2312312}`} className="">
+            <Link href={`/blog/${2312312}`} className="">
               Read More
             </Link>
             <FaArrowRightLong className="" />
