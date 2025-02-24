@@ -1,18 +1,26 @@
 "use client"
 import React, {useState} from 'react';
-import {LuClipboard, LuPencil, LuTwitter, LuUsers} from "react-icons/lu";
+import {LuClipboard, LuTwitter, LuUsers} from "react-icons/lu";
 import Link from "next/link";
 import {GrFacebookOption, GrInstagram, GrYoutube} from "react-icons/gr";
 import Image from "next/image";
 import {MdClose} from "react-icons/md";
 
-const WriterProfileHeader = () => {
+interface Props {
+    textColor?: string
+}
+
+const WriterProfileHeader = ({textColor} :Props) => {
     const [showMore, setShowMore] = useState(false);
     const [scaleUpProfileImg, setScaleUpProfileImg] = useState(false);
-    return (
-        <div className="w-full flex items-center justify-end  bg-darkCream h-[40dvh] rounded-xl px-5 ">
 
-            <div className="flex items-start gap-8">
+
+    return (
+        <div className="w-full flex items-center justify-end bg-zinc-400 h-[40dvh] rounded-xl px-5 relative shadow-md ">
+            <div className="w-full h-full absolute top-0 left-0 ">
+                <Image src="/profileBanner.jpg" fill sizes="fill" className="object-cover rounded-xl" alt=""/>
+            </div>
+            <div className="flex items-start gap-8 z-10">
                 <div className="text-end">
                     <h1 className="text-2xl lg:text-3xl font-bold text-white">Nickname</h1>
                     <p className="text-white text-sm md:text-lg">Mohammad hosein alirezaie</p>
@@ -40,7 +48,9 @@ const WriterProfileHeader = () => {
                         </div>
                     </div>
                     <div className="text-sm text-white  space-y-1 mt-2">
-                        <button className="" onClick={() => setShowMore(!showMore)}>...more</button>
+                        <button className="" onClick={() => setShowMore(!showMore)}>{
+                            showMore ? "show Less" : '...more'
+                        }</button>
                         {showMore && <div className="flex items-center justify-end gap-2 text-lg">
                             <Link className="hover:scale-125 hoverEffect" href={'/'}><GrInstagram/></Link>
                             <Link className="hover:scale-125 hoverEffect" href={'/'}><GrYoutube/></Link>

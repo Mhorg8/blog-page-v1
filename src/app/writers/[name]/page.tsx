@@ -7,7 +7,7 @@ import BlogItem from "@/components/blogs/BlogItem";
 const WriteAboutPage = () => {
     return (
         <div className="container">
-            <WriterProfileHeader/>
+            <WriterProfileHeader textColor="text-white"/>
 
             <div className="w-full h-full flex flex-col items-center justify-center">
                 <HeaderTitle customStyle="text-start w-full mt-10" text="All Posts"/>

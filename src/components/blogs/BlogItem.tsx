@@ -8,7 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const BlogItem = () => {
   return (
-    <div className="w-full max-w-4xl max-h-[200px] h-fit  flex items-start justify-between gap-4  md:gap-5 lg:gap-7 border-b-4 border-black py-2 md:py-0">
+    <div className="w-full max-w-4xl max-h-[200px] h-fit  flex items-start justify-between gap-4  md:gap-5 lg:gap-7 border-b-4 border-black py-2 md:py-1">
       {/* image container */}
       <Link href={`/blog/${231231}`} className="w-[170px] h-[170px] relative">
         <Image
