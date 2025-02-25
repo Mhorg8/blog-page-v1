@@ -2,12 +2,14 @@ import React from 'react';
 import {LuPencil} from "react-icons/lu";
 import CustomTooltip from "@/components/CustomTooltip";
 import Image from "next/image";
+import NotificationMessage from "@/components/NotificationMessage";
 
 const ProfilePage = () => {
     return (
         <div className="container h-full mt-10">
-            <div className="flex items-start justify-between">
-                <div className="w-1/2">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-5 justify-between">
+                {/* user profile image and name*/}
+                <div className="w-1/2 border-b md:border-none pb-5 md:pb-0">
                     <div className="">
                         <div className="w-[120px] h-[120px] bg-zinc-200 rounded-full  relative shadow-md ">
                             <div className="absolute top-0 right-0">
@@ -26,33 +28,48 @@ const ProfilePage = () => {
                             is a company works on Game development and generate SAAS. </p>
                     </div>
                 </div>
-                <div className="w-1/2 h-full space-y-5">
-                    <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                            <h4 className="font-semibold ">First name</h4>
-                            <p className="text-sm text-darkGray">Mohamamd hosein</p>
+
+                {/* user profile info section */}
+                <div className="w-1/2 h-full">
+                    <div className="w-100 h-full space-y-5 border-b pb-5">
+                        <div className="flex flex-wrap gap-3 items-start justify-between">
+                            <div className="flex-1">
+                                <h4 className="font-semibold text0-m md:text-base">First name</h4>
+                                <p className="text-sm text-darkGray">Mohamamd hosein</p>
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-semibold text0-m md:text-base">Last name</h4>
+                                <p className="text-sm text-darkGray">Alirezaie</p>
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-semibold text0-m md:text-base">Birthday</h4>
+                                <p className="text-sm text-darkGray">2002/12/16</p>
+                            </div>
                         </div>
-                        <div className="flex-1">
-                            <h4 className="font-semibold ">Last name</h4>
-                            <p className="text-sm text-darkGray">Alirezaie</p>
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="font-semibold ">Birthday</h4>
-                            <p className="text-sm text-darkGray">2002/12/16</p>
+                        <div className="flex flex-wrap gap-3 items-center justify-between">
+                            <div className="flex-1">
+                                <h4 className="font-semibold text-sm md:text-base">Email</h4>
+                                <p className="text-sm text-darkGray ">mohamamdalirezaie081...</p>
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-semibold text0-m md:text-base">Phone</h4>
+                                <p className="text-sm text-darkGray ">+98 923 22 989 76</p>
+                            </div>
+                            <div className="flex-1">
+                                <h4 className="font-semibold text0-m md:text-base">Location</h4>
+                                <p className="text-sm text-darkGray">Tehran</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                            <h4 className="font-semibold">Email</h4>
-                            <p className="text-sm text-darkGray ">mohamamdalirezaie081...</p>
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="font-semibold ">Phone number</h4>
-                            <p className="text-sm text-darkGray">+98 923 22 989 76</p>
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="font-semibold ">Location</h4>
-                            <p className="text-sm text-darkGray">Tehran</p>
+                    {/* Notifications*/}
+                    <div className="mt-5 w-full ">
+                        <h3 className="text-2xl font-medium">Notifications</h3>
+                        <div className="mt-5 flex items-center w-full flex-wrap justify-between gap-3">
+                            {/* Notification message*/}
+                            <NotificationMessage/>
+                            <NotificationMessage/>
+                            <NotificationMessage/>
+                            <NotificationMessage/>
                         </div>
                     </div>
                 </div>
